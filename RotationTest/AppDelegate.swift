@@ -35,3 +35,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate {
+    
+    class func topViewController() -> UIViewController? {
+        guard let window = UIApplication.shared.delegate?.window else {
+            return nil
+        }
+        return window?.rootViewController?.topViewController()
+    }
+}
+
+
+
+extension UIViewController {
+    
+    func topViewController() -> UIViewController? {
+        return UIViewController.topViewController(withRootViewController: self)
+    }
+
+    fileprivate class func topViewController(withRootViewController rootViewController: UIViewController?) -> UIViewController? {
+        
+        guard let root = rootViewController else {
+            return nil
+        }
+        
+        if let tabbarController = rootViewController as? UITabBarController {
+            return self.topViewController(withRootViewController: tabbarController.selectedViewController)
+        }
+        
+        if let nav = rootViewController as? UINavigationController {
+            return self.topViewController(withRootViewController: nav.visibleViewController)
+        }
+        
+        if let presentedViewController = root.presentedViewController {
+            return self.topViewController(withRootViewController: presentedViewController)
+        }
+        
+        return root
+    }
+    
+    func toLandscape() {
+        UIDevice.current.setValue(UIDeviceOrientation.unknown.rawValue, forKey: "orientation")
+        UIDevice.current.setValue(UIDeviceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+    }
+    func toPortrait() {
+        UIDevice.current.setValue(UIDeviceOrientation.unknown.rawValue, forKey: "orientation")
+        UIDevice.current.setValue(UIDeviceOrientation.portrait.rawValue, forKey: "orientation")
+    }
+}

@@ -14,6 +14,7 @@
 		866174772438C3D900E64CB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 866174752438C3D900E64CB9 /* Main.storyboard */; };
 		866174792438C3DB00E64CB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866174782438C3DB00E64CB9 /* Assets.xcassets */; };
 		8661747C2438C3DB00E64CB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8661747A2438C3DB00E64CB9 /* LaunchScreen.storyboard */; };
+		866174842438C40700E64CB9 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866174832438C40700E64CB9 /* TabbarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		866174782438C3DB00E64CB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8661747B2438C3DB00E64CB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8661747D2438C3DB00E64CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		866174832438C40700E64CB9 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				866174782438C3DB00E64CB9 /* Assets.xcassets */,
 				8661747A2438C3DB00E64CB9 /* LaunchScreen.storyboard */,
 				8661747D2438C3DB00E64CB9 /* Info.plist */,
+				866174832438C40700E64CB9 /* TabbarViewController.swift */,
 			);
 			path = RotationTest;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				866174742438C3D900E64CB9 /* SecondViewController.swift in Sources */,
 				866174722438C3D900E64CB9 /* FirstViewController.swift in Sources */,
 				8661746E2438C3D900E64CB9 /* AppDelegate.swift in Sources */,
+				866174842438C40700E64CB9 /* TabbarViewController.swift in Sources */,
 				866174702438C3D900E64CB9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
